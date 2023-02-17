@@ -1,0 +1,18 @@
+<p>'Texto'</p>
+<p>{{ name }}</p>
+<button (click)="updateCount()">+1</button>
+<button (click)="zeroCount()">Zerar</button>
+<p>{{ count }}</p>
+<p>{{ index }}</p>
+<img [src]="imgSource[index]" height="500px" alt="texto" />
+<br />
+<br />
+<br />
+<button id="previous" (click)="previousImage()" [disabled]="disabledPrev">
+  <=
+</button>
+<button id="next" (click)="nextImage()" [disabled]="disabledNext">=></button>
+<br />
+<br />
+<button id="onoff" (click)="disabled = !disabled">On/Off</button>
+<input type="text" [disabled]="disabled" />
