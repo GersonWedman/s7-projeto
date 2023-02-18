@@ -7,60 +7,96 @@ import { Component } from '@angular/core';
 })
 export class GaleriaComponent {
 
-  name='Gerson';
-
-  count = 0;
-
-  index = 0;
-  disabledPrev = false;
-  disabledNext = false;
-  disabled = false;
-
-  imgSource = ['https://www.lordinario.it/wp-content/uploads/2018/10/TEX-rampante-Galep.jpg',
+  public title = "Galeria de Gibis";
+  public fotos = ['https://www.lordinario.it/wp-content/uploads/2018/10/TEX-rampante-Galep.jpg',
   'https://1.bp.blogspot.com/-oZULWV9Csh0/Xej09rnLPbI/AAAAAAAAiXw/BYJUaTwNDuwCvijht0a210b_FKxpPstFwCLcBGAsYHQ/s1600/FB_IMG_1575546796489.jpg',
-  'https://i.pinimg.com/736x/53/67/e6/5367e6f10f28181de20a42b5960407b4.jpg']
+   'https://i.pinimg.com/736x/53/67/e6/5367e6f10f28181de20a42b5960407b4.jpg'];
 
-  updateCount(){
-    this.count+=1;
+  public fotoAtual = 0;
+
+  public voltarParaPrimeira(){
+    this.fotoAtual = this.primeira();
   }
-  zeroCount(){
-    this.count=0;
+
+  public irParaProxima(){
+    this.fotoAtual++;
   }
 
-nextImage(){
-  this.index+=1;
-    if(this.index <= 0){
-      this.disabledNext = false;
-      this.disabledPrev = true;
-    }
-    else if(this.index==1){
-      this.disabledPrev = false;
-      this.disabledNext = false;
-    }
-    else if(this.index>=2){
-      this.disabledNext = true;
-      this.disabledPrev = false;
-    }
+  public voltarParaAnterior(){
+    this.fotoAtual--;
+  }
 
-}
-previousImage(){
-  this.index-=1;
-    if(this.index <= 0){
-      this.disabledPrev = true;
-      this.disabledNext = false;
-    }
-    else if(this.index==1){
-      this.disabledPrev = false;
-      this.disabledNext = false;
-    }
-    else if(this.index>=2){
-      this.disabledPrev = false;
-      this.disabledNext = true;
-    }
+  public vaiParaUltima(){
+    this.fotoAtual = this.ultima();
+  }
 
+  public primeira(){
+    return 0;
+  }
 
-}
+  public ultima(){
+    return this.fotos.length - 1;
+  }
 
 
 
 }
+
+
+
+
+
+
+// name='Gerson';
+
+// count = 0;
+
+// index = 0;
+// disabledPrev = false;
+// disabledNext = false;
+// disabled = false;
+
+// imgSource = ['https://www.lordinario.it/wp-content/uploads/2018/10/TEX-rampante-Galep.jpg',
+// 'https://1.bp.blogspot.com/-oZULWV9Csh0/Xej09rnLPbI/AAAAAAAAiXw/BYJUaTwNDuwCvijht0a210b_FKxpPstFwCLcBGAsYHQ/s1600/FB_IMG_1575546796489.jpg',
+// 'https://i.pinimg.com/736x/53/67/e6/5367e6f10f28181de20a42b5960407b4.jpg']
+
+// updateCount(){
+//   this.count+=1;
+// }
+// zeroCount(){
+//   this.count=0;
+// }
+
+// nextImage(){
+// this.index+=1;
+//   if(this.index <= 0){
+//     this.disabledNext = false;
+//     this.disabledPrev = true;
+//   }
+//   else if(this.index==1){
+//     this.disabledPrev = false;
+//     this.disabledNext = false;
+//   }
+//   else if(this.index>=2){
+//     this.disabledNext = true;
+//     this.disabledPrev = false;
+//   }
+
+// }
+// previousImage(){
+// this.index-=1;
+//   if(this.index <= 0){
+//     this.disabledPrev = true;
+//     this.disabledNext = false;
+//   }
+//   else if(this.index==1){
+//     this.disabledPrev = false;
+//     this.disabledNext = false;
+//   }
+//   else if(this.index>=2){
+//     this.disabledPrev = false;
+//     this.disabledNext = true;
+//   }
+
+
+// }
