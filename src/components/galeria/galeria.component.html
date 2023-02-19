@@ -8,19 +8,29 @@
       <button
         (click)="voltarParaPrimeira()"
         [disabled]="fotoAtual == primeira()"
+        class="btn btn-success"
       >
         |<<
       </button>
       <button
         (click)="voltarParaAnterior()"
         [disabled]="fotoAtual == primeira()"
+        class="btn btn-primary"
       >
         <
       </button>
-      <button (click)="irParaProxima()" [disabled]="fotoAtual == ultima()">
+      <button
+        (click)="irParaProxima()"
+        [disabled]="fotoAtual == ultima()"
+        class="btn btn-primary"
+      >
         >
       </button>
-      <button (click)="vaiParaUltima()" [disabled]="fotoAtual == ultima()">
+      <button
+        (click)="vaiParaUltima()"
+        [disabled]="fotoAtual == ultima()"
+        class="btn btn-success"
+      >
         >>|
       </button>
     </div>
