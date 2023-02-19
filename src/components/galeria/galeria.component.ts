@@ -11,11 +11,6 @@ export class GaleriaComponent {
 
   public default:boolean = true;
 
-
-  //@Input() public fotos: string = [];
-
-
-
 //public title = "Galeria de Gibis";
   public fotos = ['https://www.lordinario.it/wp-content/uploads/2018/10/TEX-rampante-Galep.jpg',
   'https://1.bp.blogspot.com/-oZULWV9Csh0/Xej09rnLPbI/AAAAAAAAiXw/BYJUaTwNDuwCvijht0a210b_FKxpPstFwCLcBGAsYHQ/s1600/FB_IMG_1575546796489.jpg',
